@@ -1,3 +1,9 @@
 {
-	"/": []
+	"/": [],
+	"/ateliers": [],
+	"/contact": [
+		"src/routes/contact/+page.server.ts"
+	],
+	"/parcours": [],
+	"/spectacles": []
 }

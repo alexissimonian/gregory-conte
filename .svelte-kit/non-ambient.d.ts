@@ -40,6 +40,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/ateliers" | "/ateliers/" | "/contact" | "/contact/" | "/parcours" | "/parcours/" | "/spectacles" | "/spectacles/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/fonts/ITC Benguiat Bold Condensed Italic.woff" | "/fonts/ITC Benguiat Bold Condensed Italic.woff2" | "/fonts/ITC Benguiat Bold Condensed.woff" | "/fonts/ITC Benguiat Bold Condensed.woff2" | "/fonts/ITC Benguiat Book Condensed Italic.woff" | "/fonts/ITC Benguiat Book Condensed Italic.woff2" | "/fonts/ITC Benguiat Book Condensed.woff" | "/fonts/ITC Benguiat Book Condensed.woff2" | "/styles/fonts.css" | string & {};
+		Asset(): string & {};
 	}
 }

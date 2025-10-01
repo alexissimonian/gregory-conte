@@ -1,57 +1,58 @@
-<header id="main-page-header">
-    <h1>Grégory <br /> Simonian</h1>
-    <p>Conteur</p>
-    <p>Animateur en ateliers d'écriture</p>
+<script>
+    import GregButton from "$lib/components/GregButton.svelte";
+</script>
+
+<header>
+    <h2>Grégory Simonian</h2>
+    <GregButton />
 </header>
 <section>
     <header>
-        <p>
-            Portés par les siècles et les océans, les contes nous rassemblent
-            autour de récits qui nous touchent tous.
-        </p>
-        <p>
-            Spectacles et ateliers inclusifs, adaptés à tous les publics et à
-            chaque lieu, des tout-petits aux adultes.
-        </p>
+        <h2>conteur · animateur d’ateliers d’écriture</h2>
     </header>
     <div>
-        <h2>Spectacles</h2>
-        <i class="fa-solid fa-masks-theater"></i>
-        <h3>Racontée de contes traditionnels</h3>
         <p>
-            Dans ma besace, des spectacles pour tous les âges, pour les
-            touts-petits et les très très grands.
-        </p>
-        <p>
-            Écouter un conte, c’est ouvrir une porte vers des mondes anciens et
-            inattendus, s’émerveiller et goûter le plaisir simple d’être
-            ensemble autour d’une histoire.
+            Des récits puisés dans le répertoire traditionnel pour le jeune
+            public ou pour les adultes. Des ateliers de création ludiques, qui
+            vous invitent à donner vie à votre propre conte. Spectacles et
+            Ateliers inclusifs, adaptés aux publics et à chaque lieu.
         </p>
     </div>
-    <div>
-        <h2>Ateliers d'écriture</h2>
-        <i class="fa-solid fa-feather"></i>
-        <h3>Accompagnement dans l'écriture d'un compte</h3>
-        <p>
-            Écrire des contes nous emmène au cœur de nos profondeurs, où les
-            images et symboles prennent vie, souvent drôles, parfois absurdes,
-            mais toujours révélateurs.
-        </p>
-        <p>
-            Initiez-vous aux bases de la narration. Inclusif, l‘atelier s’adapte
-            à l’âge et au public. Chaque participant repart avec un conte.
-        </p>
-    </div>
-    <footer>
-        <button>Parcours</button>
-        <button>Spectacles</button>
-        <button>Ateliers</button>
-        <button>Contact</button>
-    </footer>
 </section>
-
-<style>
-    #main-page-header {
-        text-transform: uppercase;
-    }
-</style>
+<section>
+    <p>
+        Transmis par une parole vivante,<br />
+        Les contes traversent les siècles et les océans,<br />
+        Pour arriver jusqu’à nos oreilles.<br />
+        Qu’ont-ils à nous raconter ?
+    </p>
+</section>
+<section>
+    <header>
+        <h2>toutes les routes mènent à l’imaginaire</h2>
+    </header>
+    <div>
+        <div>
+            <h3>spectacles de contes</h3>
+            <p>
+                Écouter un conte, c'est ouvrir une porte vers des mondes
+                inattendus et s'émerveiller ensemble. Un moment de partage
+                simple et authentique qui nous reconnecte à la saveur des
+                histoires. Des spectacles pour tous les âges, des tout-petits
+                aux très grands.
+            </p>
+            <GregButton page="spectacles" label="En Savoir Plus" />
+        </div>
+        <div>
+            <h3>ateliers d&#x2019écriture</h3>
+            <p>
+                Créer des contes nous plonge au cœur de notre imaginaire, où
+                naissent des histoires drôles, surprenantes et révélatrices.
+                Atelier accessible à tous, qui s’adapte à chaque participant.
+                Découvrez les bases de la narration et repartez avec votre
+                propre conte.
+            </p>
+            <GregButton page="ateliers" label="En Savoir Plus" />
+        </div>
+    </div>
+</section>

@@ -35,14 +35,14 @@
 </script>
 
 <header>
-    <h1>Contact</h1>
+    <h2>Contactez-moi !</h2>
 </header>
 <section>
     <div id="contact-form-container">
         <form method="post" on:submit={handleSubmit}>
             <label>Nom <input name="nom" required /></label>
             <label>Prénom <input name="prenom" required /></label>
-            <label>Email <input name="email" required /></label>
+            <label>Votre Adresse E-mail <input name="email" required /></label><br/>
             <label>Message <textarea name="message" required></textarea></label>
 
             <div bind:this={turnstileContainer}></div>
@@ -56,3 +56,5 @@
         </form>
     </div>
 </section>
+<style>
+</style>

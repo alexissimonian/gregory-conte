@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
+:root {
+    /* color */
+    --yellow-color: #EDFE8A;
+
+    /* width */
+    --underline-width: calc(100% + 0.6em);
+}
+
+html {
+    overflow-y: scroll;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -16,6 +28,7 @@ body {
 section {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 h1,
@@ -26,7 +39,24 @@ p {
     margin: 0px;
 }
 
+h1,
 h2,
 h3 {
     text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+h3::after,
+h2::after {
+    position: absolute;
+    content: '';
+    height: 0.4em;
+    background-color: var(--yellow-color);
+    z-index: -1;
+    bottom: 0.6em;
+    width: var(--underline-width);
+    left: -0.3em;
+    right: -0.3em;
+    border-radius: 0.2em;
 }

@@ -3,7 +3,7 @@
 </script>
 
 <header>
-    <h2>Grégory Simonian</h2>
+    <h2 class="no-underline">Grégory Simonian</h2>
     <GregButton />
 </header>
 <section>
@@ -56,3 +56,12 @@
         </div>
     </div>
 </section>
+<style>
+    h2.no-underline {
+        display: block;
+    }
+    
+    h2.no-underline::after {
+        display: none;
+    }
+</style>

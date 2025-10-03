@@ -2,7 +2,7 @@
     import GregButton from "$lib/components/GregButton.svelte";
 </script>
 
-<header>
+<header id="main-header">
     <h2 class="no-underline">Grégory Simonian</h2>
     <GregButton />
 </header>
@@ -20,7 +20,7 @@
     </div>
 </section>
 <section>
-    <p>
+    <p class="poetry-section">
         Transmis par une parole vivante,<br />
         Les contes traversent les siècles et les océans,<br />
         Pour arriver jusqu’à nos oreilles.<br />
@@ -31,8 +31,8 @@
     <header>
         <h2>toutes les routes mènent à l’imaginaire</h2>
     </header>
-    <div>
-        <div>
+    <div id="two-offers">
+        <div class="offer-card">
             <h3>spectacles de contes</h3>
             <p>
                 Écouter un conte, c'est ouvrir une porte vers des mondes
@@ -41,9 +41,14 @@
                 histoires. Des spectacles pour tous les âges, des tout-petits
                 aux très grands.
             </p>
-            <GregButton page="spectacles" label="En Savoir Plus" />
+            <div class="card-button">
+                <GregButton
+                    page="spectacles"
+                    label="En Savoir Plus"
+                />
+            </div>
         </div>
-        <div>
+        <div class="offer-card">
             <h3>ateliers d&#x2019écriture</h3>
             <p>
                 Créer des contes nous plonge au cœur de notre imaginaire, où
@@ -52,16 +57,67 @@
                 Découvrez les bases de la narration et repartez avec votre
                 propre conte.
             </p>
-            <GregButton page="ateliers" label="En Savoir Plus" />
+            <div class="card-button">
+                <GregButton page="ateliers" label="En Savoir Plus" />
+            </div>
         </div>
     </div>
 </section>
+
 <style>
+    p {
+        max-width: 800px;
+    }
+
     h2.no-underline {
         display: block;
     }
-    
+
     h2.no-underline::after {
         display: none;
+    }
+
+    #main-header{
+        background-color: black;
+        background-image: url("https://images.gregoryconte.com/main-header-image-black.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: top right;
+        height: 600px;
+        overflow: hidden;
+
+        h2 {
+            color: white;
+        }
+    }
+
+    .poetry-section {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #two-offers {
+        display: flex;
+        text-align: left;
+        max-width: 1000px;
+        gap: 4rem;
+    }
+
+    .offer-card {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+
+        p {
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+
+        .card-button {
+            margin-top: auto;
+            align-self: flex-start;
+        }
     }
 </style>

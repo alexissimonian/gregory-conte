@@ -51,6 +51,7 @@
         justify-content: space-between;
         padding: 0 30px;
         box-sizing: border-box;
+        border-bottom: 1px solid black;
     }
 
     .nav-right {

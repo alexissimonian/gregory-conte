@@ -10,11 +10,11 @@
         background-color: var(--yellow-color);
         cursor: pointer;
         border: 1px solid black;
-        padding: 3px 15px;
+        padding: 0.2em 1.5em;
         border-radius: 20px;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 10px;
+        font-size: 13px;
         font-family: "Inknut Antiqua", sans-serif;
     }
 </style>

@@ -272,7 +272,12 @@
             margin-bottom: 1rem;
         }
 
-        .slide-content.position-center-right{
+        .slide-content.position-top {
+            position: relative;
+            top: 5%;
+        }
+
+        .slide-content.position-center-right {
             position: relative;
             top: 20%;
             left: 30%;

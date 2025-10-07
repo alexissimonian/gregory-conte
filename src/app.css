@@ -51,6 +51,7 @@ h3 {
     text-transform: uppercase;
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 h2 {
@@ -73,4 +74,12 @@ h2::after {
     left: -0.3em;
     right: -0.3em;
     border-radius: 0.2em;
+}
+
+.faux-body {
+    background: linear-gradient(180deg,
+            #B1E1F9 0%,
+            #C0E4D9 60%,
+            #F8EED3 100%);
+    min-height: 92vh;
 }

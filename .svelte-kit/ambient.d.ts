@@ -27,40 +27,57 @@
  */
 declare module '$env/static/private' {
 	export const SECRET_TURNSTILE_SECRET_KEY: string;
-	export const MYVIMRC: string;
-	export const PATH: string;
-	export const XDG_SESSION_ID: string;
-	export const VIM: string;
-	export const LANG: string;
-	export const MOTD_SHOWN: string;
-	export const USER: string;
-	export const SSH_CLIENT: string;
-	export const SSH_CONNECTION: string;
-	export const SHELL: string;
-	export const ZSH: string;
-	export const VIMRUNTIME: string;
-	export const OLDPWD: string;
-	export const TMUX_PANE: string;
-	export const PWD: string;
-	export const XDG_RUNTIME_DIR: string;
-	export const NVIM_LOG_FILE: string;
-	export const TERM_PROGRAM: string;
-	export const LSCOLORS: string;
-	export const NVIM: string;
-	export const TERM: string;
 	export const TMUX: string;
-	export const _: string;
-	export const LESS: string;
+	export const SSH_CLIENT: string;
+	export const USER: string;
+	export const npm_config_user_agent: string;
 	export const XDG_SESSION_TYPE: string;
-	export const HOME: string;
+	export const npm_node_execpath: string;
 	export const SHLVL: string;
-	export const XDG_SESSION_CLASS: string;
-	export const LOGNAME: string;
+	export const npm_config_noproxy: string;
+	export const HOME: string;
+	export const MOTD_SHOWN: string;
+	export const OLDPWD: string;
+	export const LESS: string;
 	export const SSH_TTY: string;
-	export const MASON: string;
-	export const LS_COLORS: string;
-	export const PAGER: string;
 	export const TERM_PROGRAM_VERSION: string;
+	export const npm_package_json: string;
+	export const ZSH: string;
+	export const LSCOLORS: string;
+	export const PAGER: string;
+	export const npm_config_userconfig: string;
+	export const npm_config_local_prefix: string;
+	export const COLOR: string;
+	export const LOGNAME: string;
+	export const _: string;
+	export const npm_config_prefix: string;
+	export const npm_config_npm_version: string;
+	export const XDG_SESSION_CLASS: string;
+	export const TERM: string;
+	export const XDG_SESSION_ID: string;
+	export const npm_config_cache: string;
+	export const npm_config_node_gyp: string;
+	export const PATH: string;
+	export const NODE: string;
+	export const npm_package_name: string;
+	export const XDG_RUNTIME_DIR: string;
+	export const LANG: string;
+	export const TERM_PROGRAM: string;
+	export const LS_COLORS: string;
+	export const npm_lifecycle_script: string;
+	export const SHELL: string;
+	export const npm_package_version: string;
+	export const npm_lifecycle_event: string;
+	export const npm_config_globalconfig: string;
+	export const npm_config_init_module: string;
+	export const PWD: string;
+	export const npm_execpath: string;
+	export const SSH_CONNECTION: string;
+	export const npm_config_global_prefix: string;
+	export const npm_command: string;
+	export const TMUX_PANE: string;
+	export const INIT_CWD: string;
+	export const EDITOR: string;
 	export const NODE_ENV: string;
 }
 
@@ -75,6 +92,8 @@ declare module '$env/static/private' {
  */
 declare module '$env/static/public' {
 	export const PUBLIC_TURNSTILE_SITE_KEY: string;
+	export const PUBLIC_PHONE_NUMBER: string;
+	export const PUBLIC_EMAIL_ADDRESS: string;
 }
 
 /**
@@ -92,40 +111,57 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		SECRET_TURNSTILE_SECRET_KEY: string;
-		MYVIMRC: string;
-		PATH: string;
-		XDG_SESSION_ID: string;
-		VIM: string;
-		LANG: string;
-		MOTD_SHOWN: string;
-		USER: string;
-		SSH_CLIENT: string;
-		SSH_CONNECTION: string;
-		SHELL: string;
-		ZSH: string;
-		VIMRUNTIME: string;
-		OLDPWD: string;
-		TMUX_PANE: string;
-		PWD: string;
-		XDG_RUNTIME_DIR: string;
-		NVIM_LOG_FILE: string;
-		TERM_PROGRAM: string;
-		LSCOLORS: string;
-		NVIM: string;
-		TERM: string;
 		TMUX: string;
-		_: string;
-		LESS: string;
+		SSH_CLIENT: string;
+		USER: string;
+		npm_config_user_agent: string;
 		XDG_SESSION_TYPE: string;
-		HOME: string;
+		npm_node_execpath: string;
 		SHLVL: string;
-		XDG_SESSION_CLASS: string;
-		LOGNAME: string;
+		npm_config_noproxy: string;
+		HOME: string;
+		MOTD_SHOWN: string;
+		OLDPWD: string;
+		LESS: string;
 		SSH_TTY: string;
-		MASON: string;
-		LS_COLORS: string;
-		PAGER: string;
 		TERM_PROGRAM_VERSION: string;
+		npm_package_json: string;
+		ZSH: string;
+		LSCOLORS: string;
+		PAGER: string;
+		npm_config_userconfig: string;
+		npm_config_local_prefix: string;
+		COLOR: string;
+		LOGNAME: string;
+		_: string;
+		npm_config_prefix: string;
+		npm_config_npm_version: string;
+		XDG_SESSION_CLASS: string;
+		TERM: string;
+		XDG_SESSION_ID: string;
+		npm_config_cache: string;
+		npm_config_node_gyp: string;
+		PATH: string;
+		NODE: string;
+		npm_package_name: string;
+		XDG_RUNTIME_DIR: string;
+		LANG: string;
+		TERM_PROGRAM: string;
+		LS_COLORS: string;
+		npm_lifecycle_script: string;
+		SHELL: string;
+		npm_package_version: string;
+		npm_lifecycle_event: string;
+		npm_config_globalconfig: string;
+		npm_config_init_module: string;
+		PWD: string;
+		npm_execpath: string;
+		SSH_CONNECTION: string;
+		npm_config_global_prefix: string;
+		npm_command: string;
+		TMUX_PANE: string;
+		INIT_CWD: string;
+		EDITOR: string;
 		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
@@ -145,6 +181,8 @@ declare module '$env/dynamic/private' {
 declare module '$env/dynamic/public' {
 	export const env: {
 		PUBLIC_TURNSTILE_SITE_KEY: string;
+		PUBLIC_PHONE_NUMBER: string;
+		PUBLIC_EMAIL_ADDRESS: string;
 		[key: `PUBLIC_${string}`]: string | undefined;
 	}
 }

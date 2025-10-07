@@ -1,6 +1,7 @@
 // @ts-nocheck
 import type { Actions } from './$types';
 import { SECRET_TURNSTILE_SECRET_KEY } from '$env/static/private'
+import { redirect } from '@sveltejs/kit';
 
 async function verifyTurnstile(token: string, remoteip?: string) {
     const formData = new FormData();
@@ -19,8 +20,9 @@ async function verifyTurnstile(token: string, remoteip?: string) {
     return result.success === true;
 }
 
+
 export const actions = {
-    default: async ({ request }: import('./$types').RequestEvent) => {
+    default: async ({ request, cookies }: import('./$types').RequestEvent) => {
         const data = await request.formData();
         const turnstileToken = data.get('cf-turnstile-response') as string;
 
@@ -40,25 +42,16 @@ export const actions = {
             };
         }
 
-        const nom = data.get('nom') as string;
-        const prenom = data.get('prenom') as string;
-        const email = data.get('email') as string;
-        const message = data.get('message') as string;
+        cookies.set('verificationSiRobot', 'true', {
+            path: '/',
+            httpOnly: true,
+            secure: true,
+            sameSite: 'strict',
+            maxAge: 60 * 60 * 24 //24 hours
+        });
 
-        try {
-            console.log('Nouveau message de contact:', { nom, prenom, email, message });
+        throw redirect(303, '/contact');
 
-            return {
-                success: true,
-                message: 'Message envoyé avec succès!'
-            };
-        } catch (error) {
-            console.error('Erreur lors de l\'envoi:', error);
-            return {
-                success: false,
-                error: 'Erreur lors de l\'envoi du message'
-            };
-        }
     }
-};
+}
 ;null as any as Actions;

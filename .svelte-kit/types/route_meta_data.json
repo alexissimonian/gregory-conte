@@ -1,9 +1,10 @@
 {
 	"/": [],
 	"/ateliers": [],
-	"/contact": [
-		"src/routes/contact/+page.server.ts"
-	],
+	"/contact": [],
 	"/parcours": [],
-	"/spectacles": []
+	"/spectacles": [],
+	"/verify-turnstile": [
+		"src/routes/verify-turnstile/+page.server.ts"
+	]
 }

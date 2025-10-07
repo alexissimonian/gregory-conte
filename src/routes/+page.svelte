@@ -66,6 +66,7 @@
 </div>
 
 <style>
+
     p {
         max-width: 800px;
     }
@@ -84,7 +85,7 @@
         background-size: 70%;
         background-repeat: no-repeat;
         background-position: top right;
-        height: 600px;
+        height: 70vh;
         overflow: hidden;
         display: flex;
         align-items: center;

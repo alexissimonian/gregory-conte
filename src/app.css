@@ -83,3 +83,11 @@ h2::after {
             #F8EED3 100%);
     min-height: 92vh;
 }
+
+.additional-content {
+    background-color: #f8eed3;
+}
+
+strong {
+    font-weight: 700;
+}

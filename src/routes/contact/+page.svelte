@@ -25,7 +25,4 @@
 </div>
 
 <style>
-    strong {
-        font-weight: 700;
-    }
 </style>

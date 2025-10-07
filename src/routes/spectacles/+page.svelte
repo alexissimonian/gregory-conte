@@ -88,7 +88,7 @@
         </div>
     </section>
 </div>
-<div class="additionnal-content"></div>
+<div class="additional-content"></div>
 
 <style>
     .faux-body {

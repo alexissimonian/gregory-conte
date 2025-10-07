@@ -130,7 +130,6 @@
     }
 
     .additional-content {
-        background-color: #f8eed3;
 
         #mes-formations-card {
             background-color: #ead7a4;

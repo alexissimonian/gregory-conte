@@ -38,6 +38,36 @@
                 "Je viens chez vous ou à votre événement pour partager ensemble un instant suspendu, hors du quotidien.",
         },
     ];
+
+    let activeIndex = 0;
+
+    const storiesExamples = [
+        {
+            title: "Vietnam",
+            image: "https://images.gregoryconte.com/vietnam.png",
+            synopsis: `Dans un village où pousse un arbre aux fruits précieux, un corbeau géant apparaît un jour..."Je mange vos fruits, et je vous rembourse avec de l’or."`,
+            ending: "Que cache vraiment cette promesse ?",
+            textPosition: "top",
+        },
+        {
+            title: "Îles de Pâques",
+            image: "https://images.gregoryconte.com/iledepaque.png",
+            synopsis: `Tangaroa, dieu des océans, prend la forme d'un phoque pour aller découvrir les Hommes. Pris dans un filet de pêche, la rencontre devient inévitable.`,
+            ending: "Comment sera-t-il accueilli ?",
+            textPosition: "center-right",
+        },
+        {
+            title: "Tibet",
+            image: "https://images.gregoryconte.com/tibet.png",
+            synopsis: `Un homme maladroit se fait passer pour un grand devin. Grâce à une chance inespérée, il parvient à faire croire en son mensonge et obtient la renommée`,
+            ending: "La chance finira-t-elle par tourner ?",
+            textPosition: "top-right",
+        },
+    ];
+
+    function changeStory(index) {
+        activeIndex = index;
+    }
 </script>
 
 <div class="faux-body">
@@ -88,7 +118,51 @@
         </div>
     </section>
 </div>
-<div class="additional-content"></div>
+<div class="additional-content">
+    <section id="carousel-section">
+        <header>
+            <h2>Les Contes</h2>
+            <p>
+                Voici un apperçu de quelques récits parmi ceux que je raconte.
+            </p>
+        </header>
+        <div class="tabs">
+            {#each storiesExamples as story, i}
+                <button
+                    class:active={i === activeIndex}
+                    onclick={() => changeStory(i)}
+                    ><span>{story.title}</span></button
+                >
+            {/each}
+        </div>
+        <div class="carousel">
+            {#each storiesExamples as story, i}
+                <div
+                    class="slide"
+                    class:active={i === activeIndex}
+                    class:before={i < activeIndex}
+                    class:after={i > activeIndex}
+                    style="background-image: url({story.image}); background-position: {story.title ===
+                    'Vietnam'
+                        ? 'center 35%'
+                        : 'top'};"
+                >
+                    <div
+                        class="slide-content"
+                        class:position-top={story.textPosition === "top"}
+                        class:position-center-right={story.textPosition ===
+                            "center-right"}
+                        class:position-top-right={story.textPosition ===
+                            "top-right"}
+                    >
+                        <p>{story.synopsis}</p>
+                        <p><strong>{story.ending}</strong></p>
+                    </div>
+                </div>
+            {/each}
+        </div>
+    </section>
+</div>
 
 <style>
     .faux-body {
@@ -115,5 +189,112 @@
                 height: 40px;
             }
         }
+    }
+
+    .tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+        margin: auto;
+        padding: 3rem 2rem 1rem 2rem;
+        justify-content: space-between;
+        width: 100%;
+
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Inknut Antiqua", sans-serif;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+        }
+
+        button.active::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: -2rem;
+            height: 0px;
+            width: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 30px solid #f8eed3;
+        }
+
+        button span {
+            position: relative;
+        }
+
+        button.active span::after {
+            position: absolute;
+            content: "";
+            height: 0.5em;
+            background-color: var(--yellow-color);
+            z-index: -1;
+            bottom: 0.6em;
+            width: var(--underline-width);
+            left: -0.3em;
+            right: -0.3em;
+            border-radius: 0.2em;
+        }
+    }
+
+    #carousel-section {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .carousel {
+        position: relative;
+        overflow: hidden;
+        height: 85vh;
+    }
+
+    .slide {
+        position: absolute;
+        inset: 0;
+        transition: transform 0.5s ease-in-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 2rem;
+
+        .slide-content p {
+            margin-bottom: 1rem;
+        }
+
+        .slide-content.position-center-right{
+            position: relative;
+            top: 20%;
+            left: 30%;
+            max-width: 700px;
+        }
+
+        .slide-content.position-top-right {
+            position: relative;
+            top: 5%;
+            left: 58%;
+            max-width: 500px;
+        }
+    }
+    .slide.active {
+        transform: translateX(0);
+    }
+
+    .slide.before {
+        transform: translateX(-100%);
+    }
+
+    .slide.after {
+        transform: translateX(100%);
     }
 </style>

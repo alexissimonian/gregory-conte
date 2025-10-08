@@ -33,11 +33,11 @@
         text-decoration: none;
         color: black;
         font-weight: 600;
-        font-size: 15px;
+        font-size: 1rem;
     }
 
     h1 a {
-        font-size: 20px;
+        font-size: 1.5rem;
         font-weight: 700;
         margin: 0;
         padding: 0;
@@ -49,7 +49,7 @@
         align-items: center;
         width: 100%;
         justify-content: space-between;
-        padding: 0 30px;
+        padding: 0 2rem;
         box-sizing: border-box;
         border-bottom: 1px solid black;
     }
@@ -57,13 +57,13 @@
     .nav-right {
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: 2.5rem;
     }
 
     ul {
         list-style: none;
         display: flex;
-        gap: 30px;
+        gap: 2rem;
     }
 
     .active {

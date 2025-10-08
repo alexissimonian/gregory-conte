@@ -68,7 +68,7 @@
 <style>
 
     p {
-        max-width: 800px;
+        max-width: 50rem;
     }
 
     h2.no-underline {
@@ -85,7 +85,7 @@
         background-size: 70%;
         background-repeat: no-repeat;
         background-position: top right;
-        height: 70vh;
+        height: 38rem;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -93,19 +93,19 @@
 
         h2 {
             color: white;
-            font-size: 35px;
+            font-size: 2rem;
         }
     }
 
     .poetry-section {
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 700;
     }
 
     #two-offers {
         display: flex;
         text-align: left;
-        max-width: 1000px;
+        max-width: 63rem;
         gap: 4rem;
     }
 

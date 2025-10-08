@@ -11,10 +11,10 @@
         cursor: pointer;
         border: 1px solid black;
         padding: 0.2em 1.5em;
-        border-radius: 20px;
+        border-radius: 30px;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 13px;
+        font-size: 1rem;
         font-family: "Inknut Antiqua", sans-serif;
     }
 </style>

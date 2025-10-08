@@ -194,7 +194,7 @@
     .tabs {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        max-width: 900px;
+        max-width: 55rem;
         margin: auto;
         padding: 3rem 2rem 1rem 2rem;
         justify-content: space-between;
@@ -204,7 +204,7 @@
             background: transparent;
             border: none;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 1.5rem;
             font-weight: 700;
             font-family: "Inknut Antiqua", sans-serif;
             position: relative;
@@ -216,7 +216,7 @@
             content: "";
             position: absolute;
             z-index: 1;
-            bottom: -2rem;
+            bottom: -2.5rem;
             height: 0px;
             width: 0px;
             left: 50%;
@@ -257,7 +257,7 @@
     .carousel {
         position: relative;
         overflow: hidden;
-        height: 85vh;
+        height: 42rem;
     }
 
     .slide {
@@ -281,14 +281,14 @@
             position: relative;
             top: 20%;
             left: 30%;
-            max-width: 700px;
+            max-width: 45rem;
         }
 
         .slide-content.position-top-right {
             position: relative;
             top: 5%;
             left: 58%;
-            max-width: 500px;
+            max-width: 31rem;
         }
     }
     .slide.active {

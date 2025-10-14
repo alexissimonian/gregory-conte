@@ -1,19 +1,48 @@
 /* Colors */
+$black-color: #000000;
+$white-color: #ffffff;
 $yellow-color: #EDFE8A;
+$beige-color: #F8EED3;
+$cyan-color: #C0E4D9;
+$blue-color: #B1E1F9;
 
 /* Width */
-/* components */
-$underline-width: calc(100% + 0.6em);
+$breakpoint-s: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
 
-/*pages*/
-$tablet-width: 1500px;
 
-$mobile-width: 1325px;
+$page-max-width-lg: 1000px;
+$content-max-width-lg: 900px;
 
-$page-max-width: 1000px;
-$content-max-width: 900px;
+/* Height */
+$page-min-height: 92vh;
 
-/* Margins and paddings */
+/* Margins and Paddings */
 $section-margin: 0 auto;
-$section-padding: 3rem 2rem;
-$title-margin: 1rem;
+
+$section-padding-lg: 3rem 2rem;
+$title-margin-lg: 1rem;
+
+/* Font Sizes */
+$p-font-size-lg: 1rem;
+
+$h1-size-lg: 2.5rem;
+$h2-size-lg: 2rem;
+$h3-size-lg: 1.75rem;
+
+$h2-main-header-lg: 2rem;
+
+$underline-width: calc(100% + 0.6em);
+$underline-bottom-positioning: 0.6em;
+$underline-height: 0.4em;
+$underline-overflow: -0.3em;
+$underline-border-radius: 0.2em;
+
+/* Font Weight */
+$bold-lg: 700;
+$normal-lg: 500;
+$light-bold-lg: 600;
+$light-lg: 300;

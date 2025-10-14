@@ -153,7 +153,7 @@
         align-items: center;
         gap: 2.5rem;
 
-        @media screen and (max-width: $mobile-width) {
+        @media screen and (max-width: $breakpoint-lg) {
             display: none;
         }
     }

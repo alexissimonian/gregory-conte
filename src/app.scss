@@ -8,7 +8,7 @@ html {
 body {
     margin: 0;
     font-family: "Inknut Antiqua", sans-serif;
-    font-weight: 300;
+    font-weight: $normal-lg;
     font-size: 1rem;
     overflow-x: hidden;
     width: 100%;
@@ -22,13 +22,13 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: $page-max-width;
+    max-width: $page-max-width-lg;
     margin: $section-margin;
-    padding: $section-padding;
+    padding: $section-padding-lg;
 
     p {
-        max-width: $content-max-width;
-        margin: 0 auto;
+        max-width: $content-max-width-lg;
+        margin: $section-margin;
     }
 }
 
@@ -50,39 +50,39 @@ h3 {
 }
 
 h2 {
-    margin-bottom: $title-margin;
+    margin-bottom: $title-margin-lg;
 }
 
 h3 {
-    font-size: 21px;
-    margin-bottom: 1rem;
+    font-size: $h3-size-lg;
+    margin-bottom: $title-margin-lg;
 }
 
 h2::after {
     position: absolute;
     content: '';
-    height: 0.4em;
+    height: $underline-height;
     background-color: $yellow-color;
     z-index: -1;
-    bottom: 0.6em;
+    bottom: $underline-bottom-positioning;
     width: $underline-width;
-    left: -0.3em;
-    right: -0.3em;
+    left: $underline-overflow;
+    right: $underline-overflow;
     border-radius: 0.2em;
 }
 
 .faux-body {
     background: linear-gradient(180deg,
-            #B1E1F9 0%,
-            #C0E4D9 60%,
-            #F8EED3 100%);
+            $blue-color 0%,
+            $cyan-color 60%,
+            $beige-color 100%);
     min-height: 92vh;
 }
 
 .additional-content {
-    background-color: #f8eed3;
+    background-color: $beige-color;
 }
 
 strong {
-    font-weight: 700;
+    font-weight: $bold-lg;
 }

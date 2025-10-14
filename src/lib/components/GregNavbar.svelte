@@ -75,7 +75,7 @@
     </div>
 </nav>
 
-<style>
+<style lang="scss">
     a {
         text-decoration: none;
         color: black;
@@ -89,6 +89,7 @@
         margin: 0;
         padding: 0;
         line-height: 1;
+        white-space: nowrap;
     }
 
     nav {
@@ -100,6 +101,7 @@
         box-sizing: border-box;
         border-bottom: 1px solid black;
     }
+
     .mobile-nav-right {
         display: none;
 
@@ -151,7 +153,7 @@
         align-items: center;
         gap: 2.5rem;
 
-        @media screen and (width < 1325px) {
+        @media screen and (max-width: $mobile-width) {
             display: none;
         }
     }
@@ -170,10 +172,10 @@
         position: absolute;
         content: "";
         height: 0.4em;
-        background-color: var(--yellow-color);
+        background-color: $yellow-color;
         z-index: -1;
         bottom: 0.6em;
-        width: var(--underline-width);
+        width: $underline-width;
         left: -0.3em;
         right: -0.3em;
         border-radius: 0.2em;
@@ -197,6 +199,7 @@
         padding: 0;
         margin: 0;
         gap: 2rem;
+        white-space: nowrap;
 
         a {
             font-weight: 700;

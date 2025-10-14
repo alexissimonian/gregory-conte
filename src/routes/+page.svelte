@@ -65,7 +65,7 @@
     </section>
 </div>
 
-<style>
+<style lang="scss">
 
     p {
         max-width: 50rem;

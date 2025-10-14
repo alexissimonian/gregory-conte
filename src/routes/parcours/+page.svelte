@@ -119,7 +119,7 @@
     </section>
 </div>
 
-<style>
+<style lang="scss">
     .faux-body {
         background: linear-gradient(
             180deg,

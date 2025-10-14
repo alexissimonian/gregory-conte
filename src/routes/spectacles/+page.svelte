@@ -164,7 +164,7 @@
     </section>
 </div>
 
-<style>
+<style lang="scss">
     .faux-body {
         background: linear-gradient(
             180deg,
@@ -234,10 +234,10 @@
             position: absolute;
             content: "";
             height: 0.5em;
-            background-color: var(--yellow-color);
+            background-color: $yellow-color;
             z-index: -1;
             bottom: 0.6em;
-            width: var(--underline-width);
+            width: $underline-width;
             left: -0.3em;
             right: -0.3em;
             border-radius: 0.2em;

@@ -5,9 +5,9 @@
     export let label = "Contactez-moi";
 </script>
 <button onclick={() => goto(`/${page}`)}>{label}</button>
-<style>
+<style lang="scss">
     button {
-        background-color: var(--yellow-color);
+        background-color: $yellow-color;
         cursor: pointer;
         border: 1px solid black;
         padding: 0.2em 1.5em;

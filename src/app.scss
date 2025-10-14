@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
-:root {
-    /* color */
-    --yellow-color: #EDFE8A;
-
-    /* width */
-    --underline-width: calc(100% + 0.6em);
-}
-
 html {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -30,12 +22,12 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+    max-width: $page-max-width;
+    margin: $section-margin;
+    padding: $section-padding;
 
     p {
-        max-width: 900px;
+        max-width: $content-max-width;
         margin: 0 auto;
     }
 }
@@ -58,7 +50,7 @@ h3 {
 }
 
 h2 {
-    margin-bottom: 1rem;
+    margin-bottom: $title-margin;
 }
 
 h3 {
@@ -70,10 +62,10 @@ h2::after {
     position: absolute;
     content: '';
     height: 0.4em;
-    background-color: var(--yellow-color);
+    background-color: $yellow-color;
     z-index: -1;
     bottom: 0.6em;
-    width: var(--underline-width);
+    width: $underline-width;
     left: -0.3em;
     right: -0.3em;
     border-radius: 0.2em;

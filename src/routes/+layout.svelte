@@ -1,6 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
-	import '../app.css';
+	import '../app.scss';
     import GregNavbar from '$lib/components/GregNavbar.svelte';
 	let { children } = $props();
 </script>

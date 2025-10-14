@@ -90,10 +90,25 @@
         display: flex;
         align-items: center;
         padding: 0 15%;
+        box-sizing: border-box;
 
         h2 {
             color: white;
             font-size: 2rem;
+        }
+
+        @media screen and (width <= 1810px){
+            height: 30rem;
+        }
+
+        @media screen and (width <= 1500px){
+            height: 25rem;
+        }
+
+        @media screen and (width <= 768px){
+            padding: 0 2rem;
+            background-size: 100%;
+            background-position: center;
         }
     }
 

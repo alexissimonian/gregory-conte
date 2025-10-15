@@ -3,7 +3,7 @@
     const services = [
         {
             icon: "https://images.gregoryconte.com/elderly.png",
-            title: "Maisons de retraite",
+            title: "EHPAD",
             description:
                 "Stimuler les sens et émotions des résidents, éveiller curiosité et culture, et créer un moment d’échange chaleureux.",
         },
@@ -165,21 +165,16 @@
 </div>
 
 <style lang="scss">
-    .faux-body {
-        background: linear-gradient(
-            180deg,
-            #b1e1f9 0%,
-            #c0e4d9 60%,
-            #f8eed3 100%
-        );
-    }
-
     #service-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
         margin: 4rem 0;
         text-align: left;
+
+        @media screen and (max-width: $breakpoint-md) {
+           grid-template-columns: 1fr;
+        }
 
         .service-title {
             display: flex;
@@ -204,12 +199,14 @@
             background: transparent;
             border: none;
             cursor: pointer;
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: $tab-button-size-lg;
+            font-weight: $bold-lg;
             font-family: "Inknut Antiqua", sans-serif;
             position: relative;
             z-index: 1;
             text-transform: uppercase;
+            color: $black-color;
+            white-space: nowrap;
         }
 
         button.active::after {

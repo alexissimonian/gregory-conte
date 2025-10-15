@@ -120,17 +120,7 @@
 </div>
 
 <style lang="scss">
-    .faux-body {
-        background: linear-gradient(
-            180deg,
-            #b1e1f9 0%,
-            #c0e4d9 70%,
-            #f8eed3 100%
-        );
-    }
-
     .additional-content {
-
         #mes-formations-card {
             background-color: #ead7a4;
             border: 1px solid black;
@@ -150,6 +140,25 @@
             background-position: left center;
             background-size: 1.8rem;
             text-align: left;
+            padding-bottom: 0.7rem;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+            section {
+                padding: 2rem 0 2rem 0;
+            }
+
+            #mes-formations-card {
+                border-radius: 0;
+            }
+
+            ul {
+                padding: 0 0.2rem;
+            }
+
+            li {
+                background-position: left 0.5rem;
+            }
         }
     }
 </style>

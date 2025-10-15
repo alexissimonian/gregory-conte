@@ -1,6 +1,7 @@
 <script lang="ts">
     import { page } from "$app/state";
     import GregButton from "./GregButton.svelte";
+    import { onMount, tick } from "svelte";
 
     const navItems = [
         { id: "parcours", label: "parcours", url: "/parcours" },
@@ -9,13 +10,47 @@
     ];
 
     let isMenuOpen = false;
+    let isSticky = false;
+    let navElement: HTMLElement;
+    let navHeight = 0;
 
     function onHamburgerMenuClicked() {
         isMenuOpen = !isMenuOpen;
     }
+
+    function handleScroll() {
+        isSticky = window.scrollY > 0;
+        
+        // Add/remove top margin to body to prevent jump
+        if (typeof document !== 'undefined') {
+            const body = document.body;
+            if (isSticky) {
+                body.style.marginTop = `${navHeight}px`;
+            } else {
+                body.style.marginTop = '0';
+            }
+        }
+    }
+
+    function updateNavHeight() {
+        if (navElement) {
+            navHeight = navElement.getBoundingClientRect().height;
+        }
+    }
+
+    onMount(async () => {
+        await tick(); // Wait for DOM to be fully rendered
+        updateNavHeight();
+    });
+
+    $: if (navElement) {
+        updateNavHeight();
+    }
 </script>
 
-<nav>
+<svelte:window on:scroll={handleScroll} />
+
+<nav class:sticky={isSticky} bind:this={navElement}>
     <h1><a href="/"> Grégory Simonian </a></h1>
     <div class="nav-right">
         <div class="desktop-nav-right">
@@ -33,23 +68,19 @@
             </ul>
             <GregButton />
         </div>
-        <div
+        <button
             class="mobile-nav-right"
             class:menuopen={isMenuOpen}
             onclick={onHamburgerMenuClicked}
+            aria-label="Toggle navigation menu"
         >
             <div class="bar-1"></div>
             <div class="bar-2"></div>
             <div class="bar-3"></div>
-        </div>
+        </button>
     </div>
 
-    <div class="sideNav" class:sideNavOpen={isMenuOpen}>
-        <a
-            href="javascript:void(0)"
-            class="closeBtn"
-            onclick={onHamburgerMenuClicked}>&times;</a
-        >
+    <div class="sideNav" class:sideNavOpen={isMenuOpen} style="top: {navHeight}px; height: calc(100vh - {navHeight}px);">
         <ul class="mobile-nav">
             <li>
                 <a
@@ -79,17 +110,34 @@
     a {
         text-decoration: none;
         color: black;
-        font-weight: 600;
-        font-size: 1rem;
+        font-weight: $light-bold-lg;
+        font-size: $nav-link-lg;
+        text-wrap: nowrap;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            font-size: $nav-link-md;
+        }
     }
 
     h1 a {
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: $h1-size-lg;
+        font-weight: $bold-lg;
         margin: 0;
         padding: 0;
         line-height: 1;
         white-space: nowrap;
+
+        @media screen and (max-width: $breakpoint-xl) {
+           font-size: $h1-size-md;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+           font-size: $h1-size-s;
+        }
+
+        @media screen and (max-width: $breakpoint-s) {
+           font-size: $h1-size-xs;
+        }
     }
 
     nav {
@@ -97,15 +145,32 @@
         align-items: center;
         width: 100%;
         justify-content: space-between;
-        padding: 0 2rem;
+        padding: $nav-padding-lg;
         box-sizing: border-box;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $black-color;
+        background-color: $white-color;
+        z-index: 10;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            padding: $nav-padding-md;
+        }
+
+        @media screen and (max-width: $breakpoint-lg) {
+            &.sticky {
+                position: fixed;
+                top: 0;
+            }
+        }
     }
 
     .mobile-nav-right {
         display: none;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
 
-        @media screen and (width < 1325px) {
+        @media screen and (max-width: $breakpoint-lg) {
             display: block;
             cursor: pointer;
         }
@@ -115,8 +180,8 @@
         .bar-3 {
             width: 2rem;
             height: 2px;
-            transition: 0.4s;
-            background-color: black;
+            transition: 0.2s;
+            background-color: $black-color;
             margin: 6px 0;
         }
     }
@@ -135,12 +200,11 @@
         height: 100%;
         width: 0;
         position: fixed;
-        top: 0;
         right: 0;
         background-color: white;
         overflow-x: hidden;
-        transition: 0.5s;
-        border-left: 1px solid black;
+        transition: 0.3s;
+        border-left: 1px solid $black-color;
         z-index: 2;
     }
 
@@ -151,7 +215,11 @@
     .desktop-nav-right {
         display: flex;
         align-items: center;
-        gap: 2.5rem;
+        gap: 2rem;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            gap: 1rem;
+        }
 
         @media screen and (max-width: $breakpoint-lg) {
             display: none;
@@ -162,48 +230,45 @@
         list-style: none;
         display: flex;
         gap: 2rem;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            gap: 1.5rem;
+        }
     }
 
     .active {
         position: relative;
+        z-index: 2;
     }
 
     .active::after {
         position: absolute;
         content: "";
-        height: 0.4em;
+        height: 0.5em;
         background-color: $yellow-color;
         z-index: -1;
-        bottom: 0.6em;
+        bottom: 0.5em;
         width: $underline-width;
-        left: -0.3em;
-        right: -0.3em;
-        border-radius: 0.2em;
-    }
-
-    .closeBtn {
-        font-size: 3rem;
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
-        line-height: 1;
+        left: $underline-overflow;
+        right: $underline-overflow;
+        border-radius: $underline-border-radius;
     }
 
     .mobile-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: top;
         height: 100%;
         list-style: none;
-        padding: 0;
+        padding: 3rem;
         margin: 0;
         gap: 2rem;
         white-space: nowrap;
 
         a {
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: $bold-lg;
+            font-size: 1.2rem;
         }
     }
 </style>

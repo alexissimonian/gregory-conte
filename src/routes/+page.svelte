@@ -11,14 +11,15 @@
 <div class="faux-body">
     <section>
         <header>
-            <h2>conteur · animateur d’ateliers d’écriture</h2>
+            <h2>conteur</h2>
         </header>
         <div>
             <p>
-                Des récits puisés dans le répertoire traditionnel pour le jeune
-                public ou pour les adultes. Des ateliers de création ludiques,
-                qui vous invitent à donner vie à votre propre conte. Spectacles
-                et Ateliers inclusifs, adaptés aux publics et à chaque lieu.
+                Je propose des récits puisés dans le répertoire traditionnel
+                pour le jeune public ou pour les adultes et des ateliers de
+                création ludiques qui vous invitent à donner vie à votre propre
+                conte. Mes spectacles et ateliers inclusifs sont adaptés à tous
+                les publics et à chaque lieu.
             </p>
         </div>
     </section>
@@ -32,7 +33,7 @@
     </section>
     <section>
         <header>
-            <h2>toutes les routes mènent à l’imaginaire</h2>
+            <h2>ce que je propose</h2>
         </header>
         <div id="two-offers">
             <div class="offer-card">
@@ -66,7 +67,6 @@
 </div>
 
 <style lang="scss">
-
     p {
         max-width: 50rem;
     }
@@ -92,43 +92,99 @@
         padding: 0 15%;
         box-sizing: border-box;
 
-        h2 {
-            color: white;
-            font-size: 2rem;
+        @media screen and (max-width: $breakpoint-lg) {
+            padding: 0 10%;
         }
 
-        @media screen and (width <= 1810px){
+        @media screen and (max-width: $breakpoint-md) {
+            justify-content: center;
+        }
+
+        h2 {
+            color: $white-color;
+            font-size: $h2-main-header-lg;
+
+            @media screen and (max-width: $breakpoint-xl) {
+                font-size: $h2-main-header-md;
+            }
+
+            @media screen and (max-width: $breakpoint-md) {
+                display: none;
+            }
+        }
+
+        @media screen and (width <= 1810px) {
             height: 30rem;
         }
 
-        @media screen and (width <= 1500px){
+        @media screen and (width <= 1500px) {
             height: 25rem;
         }
 
-        @media screen and (width <= 768px){
-            padding: 0 2rem;
+        @media screen and (width <= 768px) {
+            padding: 0 2rem 2rem 2rem;
             background-size: 100%;
             background-position: center;
         }
     }
 
+    #titleAndCta {
+        @media screen and (max-width: $breakpoint-md) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
     .poetry-section {
-        font-size: 1.2rem;
-        font-weight: 700;
+        font-size: $p-poetry-lg;
+        font-weight: $bold-lg;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            font-size: $p-poetry-md;
+        }
     }
 
     #two-offers {
         display: flex;
         text-align: left;
-        max-width: 63rem;
-        gap: 4rem;
+        max-width: $page-max-width-lg;
+        gap: $two-offers-gap-lg;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            gap: $two-offers-gap-md;
+        }
+
+        @media screen and (max-width: $breakpoint-lg) {
+            gap: $two-offers-gap-s;
+        }
+
+        @media screen and (max-width: $additional-breakpoint-two-offers) {
+            gap: $two-offers-gap-xs;
+        }
+
+        @media screen and (max-width: $grid-breakpoint-two-offers) {
+            display: block;
+            text-align: center;
+            max-width: $content-max-width-md;
+        }
     }
 
     .offer-card {
         flex: 1;
-        padding: 2rem;
+        padding: $two-offers-padding-lg;
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            padding: $two-offers-padding-md;
+        }
+
+        @media screen and (max-width: $breakpoint-s) {
+            padding: $two-offers-padding-s;
+        }
 
         p {
             flex-grow: 1;
@@ -138,6 +194,10 @@
         .card-button {
             margin-top: auto;
             align-self: flex-start;
+
+            @media screen and (max-width: $grid-breakpoint-two-offers) {
+                align-self: center;
+            }
         }
     }
 </style>

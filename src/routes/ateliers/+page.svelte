@@ -1,7 +1,7 @@
 <div class="faux-body">
     <section>
         <header>
-            <h2>Déroulement de l’atelier</h2>
+            <h2>l’atelier</h2>
         </header>
         <div>
             <p>
@@ -21,7 +21,7 @@
         </div>
     </section>
     <section>
-        <header><h2>Déroulement d’une séance</h2></header>
+        <header><h2>La séance</h2></header>
         <div>
             <p>
                 La première partie de la séance consiste en un jeu d’écriture
@@ -40,7 +40,7 @@
     </section>
 </div>
 
-<style>
+<style lang="scss">
     .faux-body {
         background: linear-gradient(
             180deg,

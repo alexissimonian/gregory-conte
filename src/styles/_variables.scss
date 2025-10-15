@@ -1,0 +1,87 @@
+/* Colors */
+$black-color: #000000;
+$white-color: #ffffff;
+$yellow-color: #EDFE8A;
+$beige-color: #F8EED3;
+$cyan-color: #C0E4D9;
+$blue-color: #B1E1F9;
+
+/* Width */
+$breakpoint-s: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1110px;
+$breakpoint-xl: 1300px;
+$breakpoint-xxl: 1500px;
+
+
+$page-max-width-lg: 1000px;
+$page-max-width-md: 800px;
+$content-max-width-lg: 900px;
+$content-max-width-md: 700px;
+
+/* Height */
+$page-min-height: 92vh;
+
+/* Margins and Paddings */
+$section-margin: 0 auto;
+
+$section-padding-lg: 2.5rem;
+$section-padding-md: 2rem 3rem;
+$section-padding-s: 2rem;
+$button-padding-lg: 0.2em 1.5em;
+$button-padding-md: 0.1em 1em;
+$title-margin-lg: 1rem;
+$button-border-radius-lg: 30px;
+$nav-padding-lg: 0.5rem 2rem;
+$nav-padding-md: 0.5rem 1.5rem;
+
+$two-offers-gap-lg: 4rem;
+$two-offers-gap-md: 3rem;
+$two-offers-gap-s: 2rem;
+$additional-breakpoint-two-offers: 840px;
+$grid-breakpoint-two-offers: 800px;
+$two-offers-gap-xs: 1rem;
+
+$two-offers-padding-lg: 2rem;
+$two-offers-padding-md: 1.5rem 2rem 2rem 2rem;
+$two-offers-padding-s: 1.5rem 0 2rem 0;
+
+/* Font Sizes */
+$nav-link-lg: 1rem;
+$nav-link-md: 0.9rem;
+$p-font-size-lg: 1rem;
+$p-font-size-md: 0.9rem;
+$button-font-size-lg: 1rem;
+$button-font-size-md: 0.9rem;
+
+$h1-size-lg: 1.5rem;
+$h1-size-md: 1.3rem;
+$h1-size-s: 1.2rem;
+$h1-size-xs: 1.1rem;
+$h2-size-lg: 1.5rem;
+$h2-size-md: 1.3rem;
+$h3-size-lg: 1.4rem;
+$h3-size-md: 1.2rem;
+
+$h2-main-header-lg: 2rem;
+$h2-main-header-md: 1.7rem;
+$h2-main-header-s: 1.3rem;
+$h2-main-header-xs: 1.2rem;
+
+$p-poetry-lg: 1.2rem;
+$p-poetry-md: 1.05rem;
+
+$underline-width: calc(100% + 0.6em);
+$underline-bottom-positioning: 0.62em;
+$underline-height: 0.4em;
+$underline-overflow: -0.3em;
+$underline-border-radius: 0.2em;
+
+$tab-button-size-lg: 1.5rem;
+$tab-button-size-md: 1rem;
+
+/* Font Weight */
+$bold-lg: 700;
+$normal-lg: 500;
+$light-bold-lg: 600;
+$light-lg: 300;

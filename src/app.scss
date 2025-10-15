@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Inknut Antiqua", sans-serif;
+  font-weight: $normal-lg;
+  font-size: $p-font-size-lg;
+  overflow-x: hidden;
+  width: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    font-size: $p-font-size-md;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: $page-max-width-lg;
+  margin: $section-margin;
+  padding: $section-padding-lg;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    padding: $section-padding-md;
+  }
+
+  @media screen and (max-width: $breakpoint-s) {
+    padding: $section-padding-s;
+  }
+
+  p {
+    max-width: $content-max-width-lg;
+    margin: $section-margin;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      max-width: $content-max-width-md;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      text-align: left;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+h1 {
+  font-size: $h1-size-lg;
+}
+
+h2 {
+  font-size: $h2-size-lg;
+  margin-bottom: $title-margin-lg;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    font-size: $h2-size-md;
+  }
+}
+
+h3 {
+  font-size: $h3-size-lg;
+  margin-bottom: $title-margin-lg;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    font-size: $h3-size-md;
+  }
+}
+
+h2::after {
+  position: absolute;
+  content: '';
+  height: $underline-height;
+  background-color: $yellow-color;
+  z-index: -1;
+  bottom: $underline-bottom-positioning;
+  width: $underline-width;
+  left: $underline-overflow;
+  right: $underline-overflow;
+  border-radius: 0.2em;
+}
+
+.faux-body {
+  background: linear-gradient(180deg,
+      $blue-color 0%,
+      $cyan-color 60%,
+      $beige-color 100%);
+  min-height: 92vh;
+}
+
+.additional-content {
+  background-color: $beige-color;
+}
+
+strong {
+  font-weight: $bold-lg;
+}

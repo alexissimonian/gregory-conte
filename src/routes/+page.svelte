@@ -24,10 +24,10 @@
   </section>
   <section>
     <p class="poetry-section">
-      Transmis par une parole vivante,<br />
-      Les contes traversent les siècles et les océans,<br />
-      Pour arriver jusqu’à nos oreilles.<br />
-      Qu’ont-ils à nous raconter ?
+      Transmis par une parole&nbsp;vivante,<br />
+      Les contes traversent les siècles et&nbsp;les&nbsp;océans,<br />
+      Pour arriver jusqu’à nos&nbsp;oreilles.<br />
+      Qu’ont-ils à nous&nbsp;raconter ?
     </p>
   </section>
   <section>

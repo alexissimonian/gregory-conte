@@ -20,6 +20,10 @@ body {
   @media screen and (max-width: $breakpoint-xl) {
     font-size: $p-font-size-md;
   }
+
+  @media screen and (max-width: $breakpoint-md) {
+    font-weight: $light-lg;
+  }
 }
 
 section {
@@ -41,6 +45,7 @@ section {
   p {
     max-width: $content-max-width-lg;
     margin: $section-margin;
+    line-height: $line-height-lg;
 
     @media screen and (max-width: $breakpoint-lg) {
       max-width: $content-max-width-md;

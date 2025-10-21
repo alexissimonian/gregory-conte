@@ -192,6 +192,13 @@
     justify-content: space-between;
     width: 100%;
 
+    @media screen and (max-width: $breakpoint-md){
+       justify-content: center;
+       gap: 1rem;
+       padding-left: 0rem;
+       padding-right: 0rem;
+    }
+
     button {
       background: transparent;
       border: none;

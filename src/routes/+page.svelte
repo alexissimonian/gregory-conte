@@ -31,12 +31,11 @@
     </p>
   </section>
   <section>
-    <header>
-      <h2>ce que je propose</h2>
-    </header>
     <div id="two-offers">
       <div class="offer-card">
-        <h3>spectacles de contes</h3>
+        <div>
+          <h3>spectacles de contes</h3>
+        </div>
         <p>
           Écouter un conte, c'est ouvrir une porte vers des mondes inattendus et
           s'émerveiller ensemble. Un moment de partage simple et authentique qui
@@ -48,7 +47,9 @@
         </div>
       </div>
       <div class="offer-card">
-        <h3>ateliers d&#x2019écriture</h3>
+        <div>
+          <h3>ateliers d&#x2019écriture</h3>
+        </div>
         <p>
           Créer des contes nous plonge au cœur de notre imaginaire, où naissent
           des histoires drôles, surprenantes et révélatrices. Atelier accessible
@@ -78,7 +79,7 @@
 
   #main-header {
     background-color: black;
-    background-image: url("https://images.gregoryconte.com/main-header-image-black.png");
+    background-image: url("https://images.gregoryraconte.com/main-header-image-black.png");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: top right;
@@ -193,6 +194,19 @@
 
     @media screen and (max-width: $breakpoint-s) {
       padding: $two-offers-padding-s;
+    }
+
+    h3::after {
+      position: absolute;
+      content: "";
+      height: $underline-height;
+      background-color: $yellow-color;
+      z-index: -1;
+      bottom: $underline-bottom-positioning;
+      width: $underline-width;
+      left: $underline-overflow;
+      right: $underline-overflow;
+      border-radius: 0.2em;
     }
 
     p {

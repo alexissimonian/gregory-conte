@@ -23,6 +23,7 @@ $content-max-width-md: 700px;
 $page-min-height: 92vh;
 
 $line-height-lg: 2.1;
+$line-height-md: 1.9;
 
 /* Margins and Paddings */
 $section-margin: 0 auto;
@@ -79,11 +80,12 @@ $underline-height: 0.4em;
 $underline-overflow: -0.3em;
 $underline-border-radius: 0.2em;
 
-$tab-button-size-lg: 1.5rem;
+$tab-button-size-lg: 1.3rem;
 $tab-button-size-md: 1rem;
+$tab-button-size-s: 0.7rem;
 
 /* Font Weight */
 $bold-lg: 700;
-$normal-lg: 500;
-$light-bold-lg: 600;
+$normal-lg: 400;
+$light-bold-lg: 500;
 $light-lg: 300;

@@ -53,6 +53,7 @@ section {
 
     @media screen and (max-width: $breakpoint-md) {
       text-align: left;
+      line-height: $line-height-md;
     }
   }
 }

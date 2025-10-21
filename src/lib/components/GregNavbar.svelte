@@ -26,16 +26,21 @@
   }
 
   function handleScroll() {
-    isSticky = window.scrollY > 0;
+    // Only apply sticky behavior on mobile/tablet (max-width: $breakpoint-lg)
+    const isMobileOrTablet = window.innerWidth <= 1110; // Adjust if $breakpoint-lg is different
+    isSticky = window.scrollY > 0 && isMobileOrTablet;
 
-    // Add/remove top margin to body to prevent jump
-    if (typeof document !== "undefined") {
+    // Add/remove top margin to body to prevent jump (only on mobile/tablet)
+    if (typeof document !== "undefined" && isMobileOrTablet) {
       const body = document.body;
       if (isSticky) {
         body.style.marginTop = `${navHeight}px`;
       } else {
         body.style.marginTop = "0";
       }
+    } else if (typeof document !== "undefined" && !isMobileOrTablet) {
+      // Ensure margin is removed on desktop
+      document.body.style.marginTop = "0";
     }
   }
 
@@ -127,7 +132,7 @@
   a {
     text-decoration: none;
     color: black;
-    font-weight: $light-bold-lg;
+    font-weight: 600;
     font-size: $nav-link-lg;
     text-wrap: nowrap;
 

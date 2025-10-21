@@ -107,7 +107,7 @@
             <img
               class="service-icon"
               src={service.icon}
-              alt={"icone pour " + service.title}
+              alt={"icone " + service.title}
             />
             <h3>{service.title}</h3>
           </div>

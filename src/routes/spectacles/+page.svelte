@@ -294,7 +294,7 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    height: 42rem;
+    height: 75dvh;
   }
 
   .slide {
@@ -307,25 +307,32 @@
 
     .slide-content p {
       margin-bottom: 1rem;
+      padding: 2rem;
     }
 
     .slide-content.position-top {
-      position: relative;
-      top: 5%;
-    }
-
-    .slide-content.position-center-right {
-      position: relative;
-      top: 20%;
-      left: 30%;
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
       max-width: 45rem;
     }
 
+    .slide-content.position-center-right {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 45rem;
+      text-align: center;
+    }
+
     .slide-content.position-top-right {
-      position: relative;
-      top: 5%;
-      left: 58%;
-      max-width: 31rem;
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+      max-width: 35rem;
     }
   }
   .slide.active {

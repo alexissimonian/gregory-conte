@@ -306,7 +306,7 @@
     padding: 2rem;
 
     .slide-content p.ending {
-      margin-top: 2rem !important;
+      margin-top: 1rem !important;
     }
 
     .slide-content.position-top {

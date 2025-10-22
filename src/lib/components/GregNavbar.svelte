@@ -4,7 +4,7 @@
   import { onMount, tick } from "svelte";
 
   const navItems = [
-    { id: "spectacles", label: "spectacles de contes", url: "/spectacles" },
+    { id: "spectacles", label: "spectacles de conte", url: "/spectacles" },
     { id: "ateliers", label: "ateliers d’écriture", url: "/ateliers" },
     { id: "parcours", label: "parcours", url: "/parcours" },
   ];

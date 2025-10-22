@@ -34,7 +34,7 @@
     <div id="two-offers">
       <div class="offer-card">
         <div>
-          <h3>spectacles de contes</h3>
+          <h3>spectacles de conte</h3>
         </div>
         <p>
           Écouter un conte, c'est ouvrir une porte vers des mondes inattendus et

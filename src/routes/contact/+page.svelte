@@ -8,7 +8,7 @@
 <div class="faux-body">
   <section>
     <header>
-      <h2>Contactez-moi !</h2>
+      <h2>Contactez-moi</h2>
     </header>
     <div>
       <p>

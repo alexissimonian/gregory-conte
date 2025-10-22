@@ -3,7 +3,7 @@
   const services = [
     {
       icon: "https://images.gregoryraconte.com/elderly.png",
-      title: "EHPAD",
+      title: "EHPA",
       description:
         "Stimuler les sens et émotions des résidents, éveiller curiosité et culture, et créer un moment d’échange chaleureux.",
     },

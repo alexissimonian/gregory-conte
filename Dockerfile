@@ -1,8 +1,17 @@
-  FROM node:18-alpine
-  WORKDIR /app
-  COPY package*.json ./
-  RUN npm ci --only=production
-  COPY . .
-  RUN npm run build
-  EXPOSE 3000
-  CMD ["node", "build"]
+FROM node:18-alpine
+
+ARG PUBLIC_TURNSTILE_SITE_KEY
+ARG PUBLIC_PHONE_NUMBER
+ARG PUBLIC_EMAIL_ADDRESS
+
+ENV PUBLIC_TURNSTILE_SITE_KEY=$PUBLIC_TURNSTILE_SITE_KEY
+ENV PUBLIC_PHONE_NUMBER=$PUBLIC_PHONE_NUMBER
+ENV PUBLIC_EMAIL_ADDRESS=$PUBLIC_EMAIL_ADDRESS
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["node", "build"]

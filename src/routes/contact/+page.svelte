@@ -5,6 +5,14 @@
   } from "$env/static/public";
 </script>
 
+<svelte:head>
+  <title>Grégory Raconte: Conteur Professionnel</title>
+  <meta
+    name="description"
+    content="Conteur professionnel, je propose des spectacles originaux ainsi que des ateliers de création ludique pour le jeune public ou pour les adultes. Appelez-moi pour en savoir plus !"
+  />
+</svelte:head>
+
 <div class="faux-body">
   <section>
     <header>

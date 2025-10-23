@@ -2,6 +2,14 @@
   import GregButton from "$lib/components/GregButton.svelte";
 </script>
 
+<svelte:head>
+  <title>Bienvenue sur Grégory Raconte</title>
+  <meta
+    name="description"
+    content="Conteur professionel, je propose des récits puisés dans le répertoire traditionnel pour le jeune public ou pour les adultes. Mes spectacles et ateliers inclusifs sont adaptés à tous les publics et à chaque lieu. Contactez moi!"
+  />
+</svelte:head>
+
 <header id="main-header">
   <div id="titleAndCta">
     <h2 class="no-underline">Grégory Simonian</h2>

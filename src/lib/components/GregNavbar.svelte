@@ -55,7 +55,7 @@
     updateNavHeight();
   });
 
-  $: if (navElement) {
+  $: if (navElement || isSticky) {
     updateNavHeight();
   }
 </script>

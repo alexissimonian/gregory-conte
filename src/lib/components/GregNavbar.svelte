@@ -63,7 +63,7 @@
 <svelte:window on:scroll={handleScroll} />
 
 <nav class:sticky={isSticky} bind:this={navElement}>
-  <h1><a href="/"> Grégory Simonian </a></h1>
+  <div class="site-title"><a href="/"> Grégory Simonian </a></div>
   <div class="nav-right">
     <div class="desktop-nav-right">
       <ul class="desktop-nav">
@@ -141,9 +141,16 @@
     }
   }
 
-  h1 a {
+  .site-title {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .site-title a {
     font-size: $h1-size-lg;
     font-weight: $bold-lg;
+    text-transform: uppercase;
     margin: 0;
     padding: 0;
     line-height: 1;

@@ -9,7 +9,7 @@
 <div class="faux-body">
   <section>
     <header>
-      <h2>l’atelier</h2>
+      <h1>Ateliers<span class="sr-only"> de Conte pour Tous</span></h1>
     </header>
     <div>
       <p>
@@ -27,7 +27,7 @@
     </div>
   </section>
   <section>
-    <header><h2>La séance</h2></header>
+    <header><h2>Séances</h2></header>
     <div>
       <p>
         La première partie de chaque séance consiste en un jeu d’écriture

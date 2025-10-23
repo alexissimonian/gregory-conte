@@ -13,7 +13,9 @@
 <header id="main-header">
   <div id="titleAndCta">
     <h1 class="no-underline">
-      Grégory Simonian<span> - Spectacles de Conte et Ateliers d'Écriture</span>
+      Grégory Simonian<span class="sr-only">
+        - Spectacles de Conte et Ateliers d'Écriture</span
+      >
     </h1>
     <GregButton />
   </div>
@@ -111,10 +113,6 @@
     h1 {
       color: $white-color;
       font-size: $h2-main-header-lg;
-
-      span {
-        display: none;
-      }
 
       @media screen and (max-width: $breakpoint-xl) {
         font-size: $h2-main-header-md;

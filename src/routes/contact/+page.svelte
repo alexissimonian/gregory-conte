@@ -16,7 +16,11 @@
 <div class="faux-body">
   <section>
     <header>
-      <h2>Contactez-moi</h2>
+      <h1>
+        Contactez-moi<span class="sr-only">
+          - Grégory Simonian: Conteur Professionnel</span
+        >
+      </h1>
     </header>
     <div>
       <p>

@@ -7,6 +7,7 @@
 </svelte:head>
 
 <div class="faux-body">
+  <h1 class="sr-only">Mon Parcours de Conteur Professionnel</h1>
   <section>
     <header>
       <h2>Auprès des autres</h2>

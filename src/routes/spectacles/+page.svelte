@@ -84,7 +84,7 @@
 <div class="faux-body">
   <section>
     <header>
-      <h2>Spectacles</h2>
+      <h1>Spectacles<span class="sr-only"> de conte pour tous</span></h1>
     </header>
     <div>
       <p>

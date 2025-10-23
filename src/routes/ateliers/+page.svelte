@@ -1,8 +1,8 @@
 <svelte:head>
-  <title>Atleliers d'écriture pour tous</title>
+  <title>Ateliers d'écriture pour tous</title>
   <meta
     name="description"
-    content="Conteur professionnel, je propose des ateliers de création ludique pour le jeune public ou pour les adultes qui vous invitent à donner vie à votre propre conte. Un atelier est composé de cinq séances d’une heure et demi. Le nombre de séances et leur durée sont adaptables en fonction de vos besoins."
+    content="Ateliers d'écriture de conte ludiques et inclusifs. Apprenez à créer votre propre conte en 5 séances. Pour enfants, adultes, écoles et associations."
   />
 </svelte:head>
 

@@ -6,7 +6,7 @@
   <title>Bienvenue sur Grégory Raconte</title>
   <meta
     name="description"
-    content="Conteur professionel, je propose des récits puisés dans le répertoire traditionnel pour le jeune public ou pour les adultes. Mes spectacles et ateliers inclusifs sont adaptés à tous les publics et à chaque lieu. Contactez moi!"
+    content="Grégory Simonian, conteur professionnel. Spectacles de conte et ateliers d'écriture pour tous les publics : enfants, adultes, écoles, EHPAD, médiathèques. Contactez-moi !"
   />
 </svelte:head>
 

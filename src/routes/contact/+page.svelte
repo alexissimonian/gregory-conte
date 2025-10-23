@@ -9,7 +9,7 @@
   <title>Grégory Raconte: Conteur Professionnel</title>
   <meta
     name="description"
-    content="Conteur professionnel, je propose des spectacles originaux ainsi que des ateliers de création ludique pour le jeune public ou pour les adultes. Appelez-moi pour en savoir plus !"
+    content="Contactez Grégory Simonian pour vos spectacles de conte ou ateliers d'écriture. Par téléphone ou email. Devis gratuit et projets sur mesure."
   />
 </svelte:head>
 

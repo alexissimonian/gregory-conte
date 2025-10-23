@@ -2,7 +2,7 @@
   <title>Grégory Raconte: mon parcours</title>
   <meta
     name="description"
-    content="Conteur professionnel, je détaille mon parcours : ce qui m'a donné envie de me représenter ainsi que mes formations."
+    content="Découvrez mon parcours : professeur des écoles, médiathèque d'hôpital, formé auprès de conteurs professionnels. Aujourd'hui conteur et animateur d'ateliers."
   />
 </svelte:head>
 

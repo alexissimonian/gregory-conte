@@ -77,7 +77,7 @@
   <title>Spectacles de conte pour tous</title>
   <meta
     name="description"
-    content="Les spectacles durent une heure et se composent de plusieurs contes. Chaque conte est issu de la tradition orale, un héritage ancien qui traverse les âges et les cultures. Puisant dans cette source commune à l’humanité, je crée des récits originaux, où ces histoires millénaires se racontent encore aujourd’hui."
+    content="Spectacles de conte d'une heure pour tous les âges. Récits issus de la tradition orale adaptés aux écoles, EHPAD, médiathèques, hôpitaux et événements privés."
   />
 </svelte:head>
 

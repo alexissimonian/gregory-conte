@@ -1,3 +1,11 @@
+<svelte:head>
+  <title>Grégory Raconte: mon parcours</title>
+  <meta
+    name="description"
+    content="Conteur professionnel, je détaille mon parcours : ce qui m'a donné envie de me représenter ainsi que mes formations."
+  />
+</svelte:head>
+
 <div class="faux-body">
   <section>
     <header>

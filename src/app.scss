@@ -75,6 +75,7 @@ h3 {
   z-index: 1;
 }
 
+h1,
 h2 {
   font-size: $h2-size-lg;
   margin-bottom: $title-margin-lg;
@@ -93,6 +94,7 @@ h3 {
   }
 }
 
+h1::after,
 h2::after {
   position: absolute;
   content: '';

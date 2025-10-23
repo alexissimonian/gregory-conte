@@ -12,7 +12,9 @@
 
 <header id="main-header">
   <div id="titleAndCta">
-    <h2 class="no-underline">Grégory Simonian</h2>
+    <h1 class="no-underline">
+      Grégory Simonian<span> - Spectacles de Conte et Ateliers d'Écriture</span>
+    </h1>
     <GregButton />
   </div>
 </header>
@@ -77,11 +79,11 @@
     max-width: 50rem;
   }
 
-  h2.no-underline {
+  h1.no-underline {
     display: block;
   }
 
-  h2.no-underline::after {
+  h1.no-underline::after {
     display: none;
   }
 
@@ -106,9 +108,13 @@
       justify-content: center;
     }
 
-    h2 {
+    h1 {
       color: $white-color;
       font-size: $h2-main-header-lg;
+
+      span {
+        display: none;
+      }
 
       @media screen and (max-width: $breakpoint-xl) {
         font-size: $h2-main-header-md;

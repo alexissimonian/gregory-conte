@@ -77,7 +77,7 @@
   <title>Spectacles de conte pour tous</title>
   <meta
     name="description"
-    content="Spectacles de conte d'une heure pour tous les âges. Récits issus de la tradition orale adaptés aux écoles, EHPAD, médiathèques, hôpitaux et événements privés."
+    content="Spectacles de conte d'une heure pour tous les âges. Récits issus de la tradition orale adaptés aux écoles, EHPA, médiathèques, hôpitaux et événements privés."
   />
 </svelte:head>
 

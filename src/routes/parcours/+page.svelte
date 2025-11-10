@@ -134,7 +134,7 @@
     li {
       padding-left: 2.5rem;
       background-repeat: no-repeat;
-      background-image: url("https://images.gregoryconte.com/certificate.png");
+      background-image: url("https://images.gregoryraconte.com/certificate.png");
       background-position: left center;
       background-size: 1.8rem;
       text-align: left;

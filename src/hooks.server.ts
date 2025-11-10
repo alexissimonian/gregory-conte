@@ -1,14 +1,31 @@
-import { redirect } from "@sveltejs/kit";
-import { dev } from '$app/environment';
+// Session storage for validation state
+const validatedSessions = new Set<string>();
+
+function generateSessionId(): string {
+  return crypto.randomUUID();
+}
 
 export async function handle({ event, resolve }) {
-  const verified = event.cookies.get('verificationSiRobot');
+  // Get or create session ID
+  let sessionId = event.cookies.get('sessionId');
 
-  if (event.url.pathname.includes('contact')) {
-    if (!verified) {
-      throw redirect(303, '/verify-turnstile');
-    }
+  if (!sessionId) {
+    sessionId = generateSessionId();
+    event.cookies.set('sessionId', sessionId, {
+      path: '/',
+      httpOnly: true,
+      secure: true,
+      sameSite: 'strict',
+      maxAge: 60 * 60 * 24 // 24 hours
+    });
   }
+
+  // Check if session is validated
+  event.locals.isValidated = validatedSessions.has(sessionId);
+  event.locals.sessionId = sessionId;
+  event.locals.validateSession = () => {
+    validatedSessions.add(sessionId);
+  };
 
   const response = await resolve(event);
 

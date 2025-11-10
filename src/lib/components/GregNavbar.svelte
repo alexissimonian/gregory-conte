@@ -13,6 +13,8 @@
   let isSticky = false;
   let navElement: HTMLElement;
   let navHeight = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   function onHamburgerMenuClicked(event: MouseEvent | KeyboardEvent) {
     if (event instanceof KeyboardEvent) {
@@ -50,6 +52,28 @@
     }
   }
 
+  function handleTouchStart(e: TouchEvent) {
+    touchStartX = e.touches[0].clientX;
+  }
+
+  function handleTouchMove(e: TouchEvent) {
+    touchEndX = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd() {
+    const swipeThreshold = 50; // Minimum swipe distance in pixels
+    const swipeDistance = touchEndX - touchStartX;
+
+    // Only close menu if swiping from left to right (positive distance)
+    if (swipeDistance > swipeThreshold && isMenuOpen) {
+      isMenuOpen = false;
+    }
+
+    // Reset values
+    touchStartX = 0;
+    touchEndX = 0;
+  }
+
   onMount(async () => {
     await tick(); // Wait for DOM to be fully rendered
     updateNavHeight();
@@ -63,7 +87,7 @@
 <svelte:window on:scroll={handleScroll} />
 
 <nav class:sticky={isSticky} bind:this={navElement}>
-  <div class="site-title"><a href="/"> Grégory Simonian </a></div>
+  <div class="site-title"><a href="/" onclick={() => isMenuOpen = false}> Grégory Simonian </a></div>
   <div class="nav-right">
     <div class="desktop-nav-right">
       <ul class="desktop-nav">
@@ -93,6 +117,9 @@
     class="sideNav"
     class:sideNavOpen={isMenuOpen}
     style="top: {navHeight}px; height: calc(100vh - {navHeight}px); max-height: calc(100vh - {navHeight}px);"
+    ontouchstart={handleTouchStart}
+    ontouchmove={handleTouchMove}
+    ontouchend={handleTouchEnd}
   >
     <ul class="mobile-nav">
       <li>

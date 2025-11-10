@@ -40,6 +40,8 @@
   ];
 
   let activeIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   const storiesExamples = [
     {
@@ -70,6 +72,33 @@
 
   function changeStory(index: number) {
     activeIndex = index;
+  }
+
+  function handleTouchStart(e: TouchEvent) {
+    touchStartX = e.touches[0].clientX;
+  }
+
+  function handleTouchMove(e: TouchEvent) {
+    touchEndX = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd() {
+    const swipeThreshold = 50; // Minimum swipe distance in pixels
+    const swipeDistance = touchStartX - touchEndX;
+
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance > 0 && activeIndex < storiesExamples.length - 1) {
+        // Swiped left, go to next slide
+        activeIndex++;
+      } else if (swipeDistance < 0 && activeIndex > 0) {
+        // Swiped right, go to previous slide
+        activeIndex--;
+      }
+    }
+
+    // Reset values
+    touchStartX = 0;
+    touchEndX = 0;
   }
 </script>
 
@@ -142,7 +171,12 @@
         </button>
       {/each}
     </div>
-    <div class="carousel">
+    <div
+      class="carousel"
+      ontouchstart={handleTouchStart}
+      ontouchmove={handleTouchMove}
+      ontouchend={handleTouchEnd}
+    >
       {#each storiesExamples as story, i}
         <div
           class="slide"

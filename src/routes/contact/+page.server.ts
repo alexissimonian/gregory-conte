@@ -57,7 +57,6 @@ export const actions: Actions = {
       };
     }
 
-    console.log('Validating session and redirecting...');
     locals.validateSession();
 
     throw redirect(303, '/contact');

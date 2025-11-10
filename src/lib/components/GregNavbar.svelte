@@ -135,6 +135,8 @@
     font-weight: 600;
     font-size: $nav-link-lg;
     text-wrap: nowrap;
+    position: relative;
+    transition: color 0.3s ease;
 
     @media screen and (max-width: $breakpoint-xl) {
       font-size: $nav-link-md;
@@ -261,6 +263,30 @@
 
     @media screen and (max-width: $breakpoint-xl) {
       gap: 1.5rem;
+    }
+
+    a:not(.active) {
+      position: relative;
+      z-index: 2;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0.5em;
+        left: $underline-overflow;
+        right: $underline-overflow;
+        height: 0.5em;
+        background-color: $yellow-color;
+        z-index: -1;
+        border-radius: $underline-border-radius;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
     }
   }
 

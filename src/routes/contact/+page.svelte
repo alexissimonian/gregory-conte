@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { PUBLIC_TURNSTILE_SITE_KEY } from "$env/static/public";
+  import { env } from "$env/dynamic/public";
   import type { PageData } from "./$types";
 
   export let data: PageData;
@@ -22,7 +22,7 @@
       script.onload = () => {
         // @ts-ignore
         window.turnstile.render(turnstileContainer, {
-          sitekey: PUBLIC_TURNSTILE_SITE_KEY,
+          sitekey: env.PUBLIC_TURNSTILE_SITE_KEY,
           callback: function (token) {
             turnstileToken = token;
             formElement.submit();

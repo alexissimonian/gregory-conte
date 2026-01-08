@@ -1,0 +1,18 @@
+name = "gregory-conte"
+compatibility_date = "2024-01-01"
+
+# KV namespace pour les sessions
+# Note: Le namespace doit être créé via le dashboard Cloudflare ou wrangler CLI
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "placeholder" # Remplacé automatiquement par Cloudflare Pages
+
+# Variables d'environnement pour le développement local
+# Pour la production, configurez-les dans le dashboard Cloudflare Pages
+[vars]
+PUBLIC_PHONE_NUMBER = "+33..."
+PUBLIC_EMAIL_ADDRESS = "email@example.com"
+
+# Ne jamais mettre les secrets ici ! Utilisez :
+# - Dashboard Cloudflare Pages → Settings → Environment Variables
+# - ou: wrangler pages secret put SECRET_TURNSTILE_SECRET_KEY

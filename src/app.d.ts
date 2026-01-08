@@ -6,11 +6,15 @@ declare global {
 		interface Locals {
 			isValidated: boolean;
 			sessionId: string;
-			validateSession: () => void;
+			validateSession: () => Promise<void>;
 		}
 		// interface PageData {}
 		// interface PageState {}
-		// interface Platform {}
+		interface Platform {
+			env?: {
+				SESSIONS?: KVNamespace;
+			};
+		}
 	}
 }
 
